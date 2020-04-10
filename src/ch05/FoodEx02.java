@@ -1,0 +1,58 @@
+package ch05;
+
+abstract class Food {
+	abstract void standby();
+	void eat() {
+		System.out.println("À½½ÄÀ» ¸Ô½À´Ï´Ù.");
+	}
+	abstract void cook();
+	
+	void auto() {
+		standby();
+		cook();
+		eat();
+	}
+}
+class ¶ó¸é extends Food{
+
+	@Override
+	void cook() {
+		// TODO Auto-generated method stub
+		System.out.println("³¿ºñ¿¡ ²úÀÎ´Ù.");
+	}
+
+	@Override
+	void standby() {
+		// TODO Auto-generated method stub
+		System.out.println("¶ó¸é°ú ³¿ºñ¸¦ ÁØºñÇÕ´Ï´Ù.");
+		
+	}
+	
+}
+class »ï°ã»ì extends Food{
+
+	@Override
+	void cook() {
+		// TODO Auto-generated method stub
+		System.out.println("ºÒÆÇ¿¡ ±Á´Â´Ù.");
+	}
+
+	@Override
+	void standby() {
+		// TODO Auto-generated method stub
+		System.out.println("»ï°ã»ì°ú ºÒÆÇÀ» ÁØºñÇÕ´Ï´Ù.");
+	}
+	
+}
+public class FoodEx02 {
+	static void start(Food f) {
+		f.auto();
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		start(new ¶ó¸é());
+		System.out.println("------------------------------------------------");
+		start(new »ï°ã»ì());
+	}
+
+}
