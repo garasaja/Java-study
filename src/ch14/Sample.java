@@ -64,10 +64,10 @@ public class Sample extends JFrame {
 
 				// 4 params(to, from, type, text) are mandatory. must be filled
 				HashMap<String, String> params = new HashMap<String, String>();
-				params.put("to", textField.toString());
+				params.put("to", textField.getText());
 				params.put("from", "01095253068");
 				params.put("type", "SMS");
-				params.put("text", textField_1.toString());
+				params.put("text", textField_1.getText());
 				params.put("app_version", "test app 1.2"); // application name and version
 
 				try {
